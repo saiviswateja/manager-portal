@@ -30,7 +30,6 @@ public class Manager {
     private String lastName;
 
     @NotEmpty
-    @Size(min = 8, max = 16, message = "password should be 8 to 16 length")
     private String password;
 
     private String address;

@@ -22,7 +22,11 @@ public class ManagerService {
     @Autowired
     private RoleService roleService;
 
-    public Manager addManager(Manager manager) {
+    public Manager addManager(Manager manager) throws Exception {
+        Manager manager1 = managerRepository.findByEmailId(manager.getEmailId());
+        if(manager1!=null) {
+            throw new Exception("User already exists");
+        }
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
         manager.setPassword(bCryptPasswordEncoder.encode(manager.getPassword()));
         Set<Role> roleSet = new HashSet<>();
