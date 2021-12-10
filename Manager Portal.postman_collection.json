@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "5c5ed986-7eed-48fb-9dee-441529686d71",
+		"name": "Manager Portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0bmdAZ21haWwuY29tIiwiZXhwIjoxNjM5MTQzMTI3LCJpYXQiOjE2MzkxMDcxMjd9.t5GL_cyH4rUSU16PzpYN8kUQMioMDIlB3bePLEWIZ5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"teja\",\r\n    \"lastName\":\"sai viswa\",\r\n    \"address\":\"10-427, adhimoorthy nagar\",\r\n    \"birthDate\":\"10/2/32\",\r\n    \"companyName\":\"TCS\",\r\n    \"mobile\":\"9490588824\"    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0bmdAZ21haWwuY29tIiwiZXhwIjoxNjM5MTQyNTc0LCJpYXQiOjE2MzkxMDY1NzR9.Z9_GkjusupdIYpserwR1YNLH-7-G9_1eHfA42LiQ7cs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0bmdAZ21haWwuY29tIiwiZXhwIjoxNjM5MTQzMTI3LCJpYXQiOjE2MzkxMDcxMjd9.t5GL_cyH4rUSU16PzpYN8kUQMioMDIlB3bePLEWIZ5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeePk\":2,\r\n    \"firstName\":\"sreerama\",\r\n    \"lastName\":\"prabhas\",\r\n    \"address\":\"10-427, adhimoorthy nagar\",\r\n    \"birthDate\":\"10/2/32\",\r\n    \"companyName\":\"TCS\",\r\n    \"mobile\":\"9490588824\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0bmdAZ21haWwuY29tIiwiZXhwIjoxNjM5MTQzMTI3LCJpYXQiOjE2MzkxMDcxMjd9.t5GL_cyH4rUSU16PzpYN8kUQMioMDIlB3bePLEWIZ5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"employeePk\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authenicate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"testng@gmail.com\",\r\n    \"password\":\"password1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "swagger-portal",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v3/api-docs/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v3",
+						"api-docs",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Manager",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"emailId\":\"testng@gmail.com\",\r\n    \"firstName\":\"testfirstname\",\r\n    \"lastName\":\"testLastName\",\r\n    \"password\":\"password1234\",\r\n    \"address\":\"10/427, anantapur\",\r\n    \"birthDate\":\"14/12/2021\",\r\n    \"companyName\":\"testcompany\",\r\n    \"isAdmin\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/manager/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"manager",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
